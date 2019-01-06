@@ -1,5 +1,8 @@
 package com.java.peng.design.principle.openclose;
 
+//开闭原则
+//开：对扩展开放
+//闭：对原来的代码修改关闭
 public class Test {
 	public static void main(String[] args) {
 		ICourse iCourse = new JavaDiscountCourse(001, "Hello World~", 300d);
