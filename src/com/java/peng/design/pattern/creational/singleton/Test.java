@@ -1,11 +1,7 @@
 package com.java.peng.design.pattern.creational.singleton;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.lang.reflect.Constructor;
 
 //单例模式
 //定义：保证一个类仅有一个实例，并提供一个全局访问点
@@ -31,7 +27,7 @@ import java.io.ObjectOutputStream;
 //单例模式和享元模式
 
 public class Test {
-	public static void main(String[] args) throws IOException, ClassNotFoundException {
+	public static void main(String[] args) throws Exception {
 	    /*Thread thread1 = new Thread(new T()) ;
 		thread1.start();
 		Thread thread2 = new Thread(new T()) ;
@@ -51,6 +47,25 @@ public class Test {
 		System.out.println(newInstance);
 		System.out.println(instance == newInstance);*/
 		
+		/*//饿汉静态对象，反射破坏单例测试
+		Class objectClass = HungrySingleton.class;
+		Constructor constructor = objectClass.getDeclaredConstructor();
+		constructor.setAccessible(true);
+		HungrySingleton instance = HungrySingleton.getInstance();
+		HungrySingleton newInstance =  (HungrySingleton) constructor.newInstance();
+		System.out.println(instance);
+		System.out.println(newInstance);
+		System.out.println(instance == newInstance);*/
+
+		/*//饿汉静态内部类，反射破坏单例测试
+		Class objectClass = StaticInnerClassSingleton.class;
+		Constructor constructor = objectClass.getDeclaredConstructor();
+		constructor.setAccessible(true);
+		StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+		StaticInnerClassSingleton newInstance =  (StaticInnerClassSingleton) constructor.newInstance();
+		System.out.println(instance);
+		System.out.println(newInstance);
+		System.out.println(instance == newInstance);*/
 		
 	}
 }

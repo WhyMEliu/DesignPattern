@@ -4,7 +4,9 @@ package com.java.peng.design.pattern.creational.singleton;
 public class LazySingleton {
 	private static LazySingleton lazySingleton = null;
 	
-	private LazySingleton (){}
+	private LazySingleton (){
+		
+	}
 	
 	public synchronized static LazySingleton getInstance(){
 		if(lazySingleton == null){
