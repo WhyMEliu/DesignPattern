@@ -66,6 +66,8 @@ public class Test {
 		System.out.println(instance);
 		System.out.println(newInstance);
 		System.out.println(instance == newInstance);*/
-		
+	
+		EnumInstance instance = EnumInstance.getInstance();
+		instance.printTest();
 	}
 }
