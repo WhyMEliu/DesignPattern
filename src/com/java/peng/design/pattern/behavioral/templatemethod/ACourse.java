@@ -1,4 +1,4 @@
-package com.java.peng.design.behavioral.templatemethod;
+package com.java.peng.design.pattern.behavioral.templatemethod;
 
 public abstract class ACourse {
 	

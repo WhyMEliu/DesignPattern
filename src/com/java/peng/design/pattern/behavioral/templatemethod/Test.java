@@ -1,4 +1,4 @@
-package com.java.peng.design.behavioral.templatemethod;
+package com.java.peng.design.pattern.behavioral.templatemethod;
 
 //模板方法
 //定义：定义了一个算法的骨架，并允许子类为一个或多个步骤提供实现
